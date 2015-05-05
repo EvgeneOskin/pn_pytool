@@ -10,10 +10,10 @@ class PushBulletApp(App):
 
     def __init__(self):
         super(PushBulletApp, self).__init__(
-            description='cliff demo app',
+            description='PushBullet apps',
             version='0.1',
-            command_manager=CommandManager('pn_pytool'),
-            )
+            command_manager=CommandManager('pn_pytool.commands'),
+        )
 
     def initialize_app(self, argv):
         self.log.debug('initialize_app')

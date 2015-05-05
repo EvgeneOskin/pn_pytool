@@ -11,14 +11,15 @@ class SendNote(Command):
 
     def take_action(self, parsed_args):
         self.log.info('sending greeting')
-	self.send_note(parsed_args.title)
+	self.send_note(parsed_args.title, parsed_args.body)
 
-    def send_note(self.title):
+    def send_note(self, title, body):
         pb = Pushbullet(config('PUSHBULLET_TOKEN'))
-        b.push_note(title, '')
+        pb.push_note(title, body)
 	self.log.info('Sent')
 
     def get_parser(self, prog_name):
         parser = super(SendNote, self).get_parser(prog_name)
-        parser.add_argument('title', nargs='?', default='')
+        parser.add_argument('-t', '--title', type=str)
+        parser.add_argument('-b', '--body', type=str, default='')
         return parser
