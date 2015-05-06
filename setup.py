@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-PROJECT = 'pn_pytool'
+PROJECT = 'meatool'
 
 # Change docs/sphinx/conf.py too!
-VERSION = '0.1'
+VERSION = '0.1.1'
 
 from setuptools import setup, find_packages
 
@@ -16,7 +16,7 @@ setup(
     name=PROJECT,
     version=VERSION,
 
-    description='Simple app for use push bellet API',
+    description="App with developer's tools",
     long_description=long_description,
 
     author='Eugene Oskin',
@@ -50,10 +50,10 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'pn_pytool = pn_pytool.main:main'
+            'meatool = meatool.main:main'
         ],
-        'pn_pytool.commands': [
-            'send_note = pn_pytool.send_note:SendNote',
+        'meatool.commands': [
+            'send_note = meatool.send_note:SendNote',
         ],
     },
 

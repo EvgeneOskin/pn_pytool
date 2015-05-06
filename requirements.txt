@@ -1,3 +1,0 @@
-pushbullet.py
-python-decouple
-cliff

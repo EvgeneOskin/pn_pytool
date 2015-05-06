@@ -1,7 +1,10 @@
-# pn_pytool
-Command line tool to send push notifications.
+# meatool
+Colection of command line utils.
 
-# Status
-Alpha. Support only Push Bullet. 
+# Features
+ - Send push notifications via Push Bullet
+
 # Install
-pip install git+https://github.com/EvgeneOskin/pn_pytool
+```bash
+$ pip install git+https://github.com/EvgeneOskin/meatool
+```

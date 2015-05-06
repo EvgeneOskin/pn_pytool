@@ -4,15 +4,15 @@ from cliff.app import App
 from cliff.commandmanager import CommandManager
 
 
-class PushBulletApp(App):
+class MeatoolApp(App):
 
     log = logging.getLogger(__name__)
 
     def __init__(self):
-        super(PushBulletApp, self).__init__(
-            description='PushBullet apps',
+        super(MeatoolApp, self).__init__(
+            description='Meatool app',
             version='0.1',
-            command_manager=CommandManager('pn_pytool.commands'),
+            command_manager=CommandManager('meatool.commands'),
         )
 
     def initialize_app(self, argv):
@@ -28,7 +28,7 @@ class PushBulletApp(App):
 
 
 def main(argv=sys.argv[1:]):
-    myapp = PushBulletApp()
+    myapp = MeatoolApp()
     return myapp.run(argv)
 
 
