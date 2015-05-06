@@ -42,6 +42,8 @@ setup(
         'cliff',
         'pushbullet.py',
         'python-decouple',
+        'pyworksnaps',
+        'dateutils',
     ],
 
     namespace_packages=[],
@@ -54,6 +56,7 @@ setup(
         ],
         'meatool.commands': [
             'send_note = meatool.send_note:SendNote',
+            'send_report = meatool.daily_report:SendReport',
         ],
     },
 
